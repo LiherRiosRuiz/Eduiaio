@@ -72,7 +72,7 @@
 
         <div class="mt-12 flex justify-between items-center">
             <a href="descubrir.php" class="text-indigo-600 font-bold hover:underline">← Volver a Descubrir</a>
-            <a href="tutorial_whatsapp.php" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">Siguiente: WhatsApp Fácil →</a>
+            <a href="../tutoriales/whatsapp.php" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">Siguiente: WhatsApp Fácil →</a>
         </div>
     </main>
 

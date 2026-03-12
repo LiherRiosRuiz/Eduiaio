@@ -47,8 +47,8 @@
         </div>
 
         <div class="mt-12 flex justify-between">
-            <a href="tutorial_videollamada.php" class="text-indigo-600 font-bold">← Anterior: Videollamadas</a>
-            <a href="tutorial_redes.php" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold">Siguiente: Redes Sociales →</a>
+            <a href="../tutoriales/videollamada.php" class="text-indigo-600 font-bold">← Anterior: Videollamadas</a>
+            <a href="../tutoriales/redes.php" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold">Siguiente: Redes Sociales →</a>
         </div>
     </main>
 

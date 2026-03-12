@@ -1,0 +1,32 @@
+# ── Seguridad básica ──────────────────────────────────────────────────────────
+Options -Indexes
+ServerSignature Off
+
+# ── Cabeceras de seguridad HTTP ───────────────────────────────────────────────
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ── Bloquear acceso directo a archivos sensibles ──────────────────────────────
+<FilesMatch "\.(sql|log|env|docx|pdf)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# ── Redirecciones 301: URLs antiguas de tutoriales → nueva carpeta ─────────────
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^tutorial_whatsapp\.php$       tutoriales/whatsapp.php [R=301,L]
+    RewriteRule ^tutorial_banca\.php$          tutoriales/banca.php [R=301,L]
+    RewriteRule ^tutorial_cine\.php$           tutoriales/cine.php [R=301,L]
+    RewriteRule ^tutorial_juegos\.php$         tutoriales/juegos.php [R=301,L]
+    RewriteRule ^tutorial_musica\.php$         tutoriales/musica.php [R=301,L]
+    RewriteRule ^tutorial_redes\.php$          tutoriales/redes.php [R=301,L]
+    RewriteRule ^tutorial_salud\.php$          tutoriales/salud.php [R=301,L]
+    RewriteRule ^tutorial_videollamada\.php$   tutoriales/videollamada.php [R=301,L]
+    RewriteRule ^tutorial_administracion\.php$ tutoriales/administracion.php [R=301,L]
+</IfModule>

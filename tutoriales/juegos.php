@@ -64,7 +64,7 @@
         </div>
 
         <div class="mt-12 flex justify-between items-center">
-            <a href="tutorial_musica.php" class="text-orange-600 font-bold hover:underline">← Anterior: Música</a>
+            <a href="../tutoriales/musica.php" class="text-orange-600 font-bold hover:underline">← Anterior: Música</a>
             <a href="ocio.php" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-orange-700 transition-colors">Volver a Ocio</a>
         </div>
     </main>

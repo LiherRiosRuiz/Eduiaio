@@ -92,7 +92,7 @@
 
         <div class="mt-12 flex justify-between items-center">
             <a href="ocio.php" class="text-indigo-600 font-bold hover:underline">← Volver a Ocio</a>
-            <a href="tutorial_musica.php" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">Siguiente Tutorial →</a>
+            <a href="../tutoriales/musica.php" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">Siguiente Tutorial →</a>
         </div>
     </main>
 

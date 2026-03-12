@@ -3,22 +3,31 @@
  * operaciones/eliminar_usuario.php
  *
  * Elimina un usuario de la base de datos y redirige al listado.
+ * Solo acepta peticiones POST con token CSRF válido.
  * Medida de seguridad: un administrador no puede eliminarse a sí mismo.
  */
 
-session_start();
-require_once '../configuracion/conexion.php';
-require_once '../includes/auth.php';
+require_once __DIR__ . '/../bootstrap.php';
+requerir_sesion();
 
-// Solo usuarios logueados pueden eliminar otros usuarios
-requerir_sesion('../iniciar_sesion.php');
+// Rechazar peticiones que no sean POST
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Location: listar_usuarios.php');
+    exit;
+}
 
-$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+csrf_verificar();
+
+$id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
 
 if ($id) {
     // Impedir auto-eliminación
     if ($id == $_SESSION['id_usuario']) {
-        echo "<script>alert('No puedes eliminar tu propio usuario.'); window.location.href='listar_usuarios.php';</script>";
+        $_SESSION['alerta'] = [
+            'tipo'    => 'error',
+            'mensaje' => 'No puedes eliminar tu propio usuario.',
+        ];
+        header('Location: listar_usuarios.php');
         exit;
     }
 
@@ -26,8 +35,11 @@ if ($id) {
         $stmt = $conexion->prepare("DELETE FROM usuarios WHERE id = :id");
         $stmt->execute(['id' => $id]);
     } catch (PDOException $e) {
-        // Probable error de integridad referencial (usuario con cursos asignados)
-        echo "<script>alert('Error: Es posible que este usuario tenga cursos asociados.'); window.location.href='listar_usuarios.php';</script>";
+        $_SESSION['alerta'] = [
+            'tipo'    => 'error',
+            'mensaje' => 'Error: Es posible que este usuario tenga cursos asociados.',
+        ];
+        header('Location: listar_usuarios.php');
         exit;
     }
 }

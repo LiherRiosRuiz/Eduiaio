@@ -74,7 +74,7 @@
                     <h2 class="text-white text-3xl font-bold mb-4">Cómo hacer tu primera videollamada</h2>
                     <p class="text-white/90 text-lg max-w-2xl mb-6">Guía paso a paso para usar WhatsApp y estar cerca de
                         tus hijos y nietos, estén donde estén.</p>
-                    <a href="tutorial_videollamada.php"
+                    <a href="tutoriales/videollamada.php"
                         class="inline-block bg-white text-black font-medium px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors w-fit">Leer
                         Artículo</a>
                 </div>
@@ -92,7 +92,7 @@
                 <h3 class="text-xl font-bold mb-3">WhatsApp Fácil</h3>
                 <p class="text-gray-600 mb-6 flex-grow">Aprende los trucos básicos: enviar fotos, notas de voz y crear
                     grupos con la familia.</p>
-                <a href="tutorial_whatsapp.php" class="text-indigo-600 font-semibold text-sm hover:underline">Ver Guía &rarr;</a>
+                <a href="tutoriales/whatsapp.php" class="text-indigo-600 font-semibold text-sm hover:underline">Ver Guía &rarr;</a>
             </div>
 
             <!-- Tool Card 2 -->
@@ -107,7 +107,7 @@
                 <h3 class="text-xl font-bold mb-3">Redes Sociales</h3>
                 <p class="text-gray-600 mb-6 flex-grow">Entiende Facebook e Instagram para ver las fotos que comparten
                     tus amigos y familiares.</p>
-                <a href="tutorial_redes.php" class="text-indigo-600 font-semibold text-sm hover:underline">Ver Guía &rarr;</a>
+                <a href="tutoriales/redes.php" class="text-indigo-600 font-semibold text-sm hover:underline">Ver Guía &rarr;</a>
             </div>
         </div>
     </main>

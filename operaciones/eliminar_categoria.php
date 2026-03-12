@@ -2,18 +2,22 @@
 /**
  * operaciones/eliminar_categoria.php
  *
- * Elimina una categoría existente.
+ * Elimina una categoría de la base de datos y redirige al listado.
+ * Solo acepta peticiones POST con token CSRF válido.
  */
 
-session_start();
-require_once '../configuracion/conexion.php';
-require_once '../includes/auth.php';
+require_once __DIR__ . '/../bootstrap.php';
+requerir_sesion();
 
-// Verificar sesión activa
-requerir_sesion('../iniciar_sesion.php');
+// Rechazar peticiones que no sean POST
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Location: listar_categorias.php');
+    exit;
+}
 
-// ── Validar ID de la categoría pasado por URL ──────────────────────────
-$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+csrf_verificar();
+
+$id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
 if (!$id) {
     header('Location: listar_categorias.php');
     exit;
@@ -34,30 +38,27 @@ try {
     $check = $conexion->prepare("SELECT COUNT(*) as cantidad FROM cursos WHERE categoria_id = ?");
     $check->execute([$id]);
     $result = $check->fetch();
-    
+
     if ($result['cantidad'] > 0) {
-        // No permitir eliminar si hay cursos asociados
         $_SESSION['alerta'] = [
-            'tipo' => 'error',
-            'mensaje' => "No puede eliminar la categoría porque tiene {$result['cantidad']} curso(s) asociado(s)."
+            'tipo'    => 'error',
+            'mensaje' => "No puede eliminar la categoría porque tiene {$result['cantidad']} curso(s) asociado(s).",
         ];
     } else {
-        // Eliminar la categoría
         $stmt = $conexion->prepare("DELETE FROM categorias WHERE id = ?");
         $stmt->execute([$id]);
-        
+
         $_SESSION['alerta'] = [
-            'tipo' => 'exito',
-            'mensaje' => 'Categoría eliminada exitosamente.'
+            'tipo'    => 'exito',
+            'mensaje' => 'Categoría eliminada exitosamente.',
         ];
     }
 } catch (PDOException $e) {
     $_SESSION['alerta'] = [
-        'tipo' => 'error',
-        'mensaje' => 'Error al eliminar la categoría: ' . $e->getMessage()
+        'tipo'    => 'error',
+        'mensaje' => 'Error al eliminar la categoría.',
     ];
 }
 
 header('Location: listar_categorias.php');
 exit;
-?>

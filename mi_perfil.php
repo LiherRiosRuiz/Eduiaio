@@ -6,22 +6,17 @@
  * Permite ver y actualizar los datos personales.
  */
 
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-require_once 'configuracion/conexion.php';
-require_once 'includes/auth.php';
-require_once 'includes/funciones.php';
+require_once __DIR__ . '/bootstrap.php';
 
 // Verificar acceso
-requerir_sesion('iniciar_sesion.php');
+requerir_sesion();
 
 $id_usuario = $_SESSION['id_usuario'];
 $mensaje = '';
 
 // Procesar actualización de perfil
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    csrf_verificar();
     $nombre = $_POST['nombre_completo'] ?? '';
     $email = $_POST['email'] ?? '';
     $telefono = $_POST['telefono'] ?? '';
@@ -52,7 +47,6 @@ $usuario = $stmt->fetch();
 
 $titulo_pagina = 'Mi Perfil';
 $fuente = 'Outfit';
-$css_href = 'recursos/estilos/estilos.css';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -126,6 +120,7 @@ $css_href = 'recursos/estilos/estilos.css';
 
         <div class="form-perfil">
             <form action="mi_perfil.php" method="POST">
+                <?= csrf_campo() ?>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6">
                     <div class="grupo-input">
                         <label for="usuario">Nombre de Usuario</label>

@@ -74,7 +74,7 @@
                     <h3 class="text-xl font-bold mb-2">Cine y Series</h3>
                     <p class="text-gray-600 mb-4 text-sm">Descubre cómo usar plataformas como Netflix o RTVE Play para
                         ver tus programas favoritos cuando quieras.</p>
-                    <a href="tutorial_cine.php" class="text-indigo-600 font-semibold text-sm hover:underline">Ver Tutorial</a>
+                    <a href="tutoriales/cine.php" class="text-indigo-600 font-semibold text-sm hover:underline">Ver Tutorial</a>
                 </div>
             </div>
 
@@ -88,7 +88,7 @@
                     <h3 class="text-xl font-bold mb-2">Música y Radio</h3>
                     <p class="text-gray-600 mb-4 text-sm">Escucha las canciones de tu vida o tu emisora de radio
                         preferida desde el móvil.</p>
-                    <a href="tutorial_musica.php" class="text-indigo-600 font-semibold text-sm hover:underline">Ver Tutorial</a>
+                    <a href="tutoriales/musica.php" class="text-indigo-600 font-semibold text-sm hover:underline">Ver Tutorial</a>
                 </div>
             </div>
 
@@ -102,7 +102,7 @@
                     <h3 class="text-xl font-bold mb-2">Ejercita la Mente</h3>
                     <p class="text-gray-600 mb-4 text-sm">Juegos de memoria, crucigramas y pasatiempos para mantener el
                         cerebro en forma.</p>
-                    <a href="tutorial_juegos.php" class="text-indigo-600 font-semibold text-sm hover:underline">Ver Tutorial</a>
+                    <a href="tutoriales/juegos.php" class="text-indigo-600 font-semibold text-sm hover:underline">Ver Tutorial</a>
                 </div>
             </div>
 

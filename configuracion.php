@@ -6,22 +6,17 @@
  * Cambio de contraseña y preferencias de seguridad.
  */
 
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-require_once 'configuracion/conexion.php';
-require_once 'includes/auth.php';
-require_once 'includes/funciones.php';
+require_once __DIR__ . '/bootstrap.php';
 
 // Verificar acceso
-requerir_sesion('iniciar_sesion.php');
+requerir_sesion();
 
 $id_usuario = $_SESSION['id_usuario'];
 $mensaje = '';
 
 // Procesar cambio de contraseña
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cambiar_clave'])) {
+    csrf_verificar();
     $actual = $_POST['clave_actual'] ?? '';
     $nueva  = $_POST['clave_nueva'] ?? '';
     $rep    = $_POST['clave_rep'] ?? '';
@@ -53,7 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cambiar_clave'])) {
 
 $titulo_pagina = 'Configuración';
 $fuente = 'Outfit';
-$css_href = 'recursos/estilos/estilos.css';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -118,6 +112,7 @@ $css_href = 'recursos/estilos/estilos.css';
                 Seguridad: Cambiar Contraseña
             </h2>
             <form action="configuracion.php" method="POST">
+                <?= csrf_campo() ?>
                 <div class="grupo-input">
                     <label for="clave_actual">Contraseña Actual</label>
                     <input type="password" id="clave_actual" name="clave_actual" required>

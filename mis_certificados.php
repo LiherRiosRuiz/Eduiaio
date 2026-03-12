@@ -6,16 +6,10 @@
  * de los cursos completados al 100%.
  */
 
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-require_once 'configuracion/conexion.php';
-require_once 'includes/auth.php';
-require_once 'includes/funciones.php';
+require_once __DIR__ . '/bootstrap.php';
 
 // Verificar acceso
-requerir_sesion('iniciar_sesion.php');
+requerir_sesion();
 
 $id_usuario = $_SESSION['id_usuario'];
 
@@ -46,7 +40,6 @@ $certificados = $stmt->fetchAll();
 
 $titulo_pagina = 'Mis Certificados';
 $fuente = 'Outfit';
-$css_href = 'recursos/estilos/estilos.css';
 ?>
 <!DOCTYPE html>
 <html lang="es">
