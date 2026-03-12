@@ -6,14 +6,11 @@
  * Muestra los módulos y lecciones del curso con el progreso del usuario.
  */
 
-session_start();
-require_once 'configuracion/conexion.php';
-require_once 'includes/auth.php';
-require_once 'includes/funciones.php';
+require_once __DIR__ . '/bootstrap.php';
 
 // Solo los estudiantes pueden ver los cursos
-requerir_sesion('iniciar_sesion.php');
-requerir_rol('estudiante', 'panel.php');
+requerir_sesion();
+requerir_rol('estudiante');
 
 // ── Validar parámetro de URL ──────────────────────────────────────────
 $id_curso  = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
@@ -91,7 +88,6 @@ $progreso_porcentaje = calcular_porcentaje($lecciones_completadas, $total_leccio
 // ── Variables para el fragmento <head> ───────────────────────────────
 $titulo_pagina = htmlspecialchars($curso['titulo']);
 $fuente        = 'Outfit';
-$css_href      = 'recursos/estilos/estilos.css';
 ?>
 <!DOCTYPE html>
 <html lang="es">

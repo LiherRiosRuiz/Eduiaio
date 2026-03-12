@@ -7,13 +7,11 @@
  * También ofrece navegación anterior/siguiente entre lecciones del mismo curso.
  */
 
-session_start();
-require_once 'configuracion/conexion.php';
-require_once 'includes/auth.php';
+require_once __DIR__ . '/bootstrap.php';
 
 // Solo los estudiantes pueden leer lecciones
-requerir_sesion('iniciar_sesion.php');
-requerir_rol('estudiante', 'panel.php');
+requerir_sesion();
+requerir_rol('estudiante');
 
 // ── Validar parámetro de URL ──────────────────────────────────────────
 $id_leccion = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
@@ -26,6 +24,7 @@ if (!$id_leccion) {
 
 // ── Gestionar el marcado de lección como completada (POST) ────────────
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['marcar_completada'])) {
+    csrf_verificar();
     // Insertar o actualizar el registro de progreso (ON DUPLICATE KEY UPDATE)
     $stmt = $conexion->prepare(
         "INSERT INTO progreso (usuario_id, leccion_id, completado, fecha_completado)
@@ -90,7 +89,6 @@ $id_siguiente    = ($posicion_actual < count($todas_lecciones) - 1) ? $todas_lec
 // ── Variables para el fragmento <head> ───────────────────────────────
 $titulo_pagina = htmlspecialchars($leccion['titulo']);
 $fuente        = 'Outfit';
-$css_href      = 'recursos/estilos/estilos.css';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -144,6 +142,7 @@ $css_href      = 'recursos/estilos/estilos.css';
 
             <!-- Formulario de marcar como completada / siguiente lección -->
             <form method="POST">
+                <?= csrf_campo() ?>
                 <input type="hidden" name="id_curso"         value="<?= $leccion['curso_id'] ?>">
                 <input type="hidden" name="siguiente_leccion" value="<?= $id_siguiente ?>">
 

@@ -135,6 +135,16 @@
     text-align: center;
 }
 
+.alerta-exito {
+    background: #DCFCE7;
+    color: #166534;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #16a34a;
+    text-align: center;
+}
+
 
 /* ===== Layouts (cuadrículas y flex) ===== */
 .grid-2-col {
@@ -163,4 +173,15 @@
     border-radius: 999px;
     font-size: 0.75rem;
     font-weight: 600;
+}
+
+.badge-nivel {
+    display: inline-block;
+    background: #FFF7ED;
+    color: #9A3412;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #FFEDD5;
 }

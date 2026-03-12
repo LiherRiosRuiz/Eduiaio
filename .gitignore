@@ -16,6 +16,24 @@ desktop.ini
 *.sublime-project
 *.sublime-workspace
 
+# Asistentes de IA y herramientas de código
+.agent/
+.claude/
+.codebuddy/
+.codex/
+.continue/
+.cursor/
+.gemini/
+.github/
+.kiro/
+.opencode/
+.qoder/
+.roo/
+.trae/
+.windsurf/
+skills/
+tools/
+
 # Logs y archivos temporales
 *.log
 *.tmp

@@ -1,0 +1,118 @@
+/* Variables de diseño centralizadas */
+:root {
+    --primary: #3B82F6;
+    --accent: #8B5CF6;
+    --background: #FFFFFF;
+    --surface: #F9FAFB;
+    --text: #111827;
+    --card: #FFFFFF;
+    --border: #E5E7EB;
+    --radius: 0.5rem;
+}
+
+/* Estilos para modo oscuro */
+.dark {
+    --background: #111827;
+    --surface: #1F2937;
+    --text: #F3F4F6;
+    --card: #1F2937;
+    --border: #374151;
+}
+
+/* Tipografía y espaciado */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+    transition: all 0.3s ease;
+}
+
+/* Estilos para formularios modernos */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--surface);
+    color: var(--text);
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Estilos para botones */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primario {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+}
+
+.btn-primario:hover {
+    background-color: #2563eb;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-secundario:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Estilos para cards */
+.card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para listas */
+.lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista li {
+    padding: 0.5rem 0;
+}
+
+.lista li::before {
+    content: '•';
+    color: var(--primary);
+    margin-right: 0.5rem;
+}

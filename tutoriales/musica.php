@@ -72,9 +72,9 @@
         </div>
 
         <div class="mt-12 flex justify-between items-center">
-            <a href="tutorial_cine.php" class="text-pink-600 font-bold hover:underline">← Anterior: Cine</a>
+            <a href="../tutoriales/cine.php" class="text-pink-600 font-bold hover:underline">← Anterior: Cine</a>
             <a href="ocio.php" class="text-pink-600 font-bold hover:underline">Volver a Ocio</a>
-            <a href="tutorial_juegos.php" class="bg-pink-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-pink-700 transition-colors">Siguiente: Juegos →</a>
+            <a href="../tutoriales/juegos.php" class="bg-pink-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-pink-700 transition-colors">Siguiente: Juegos →</a>
         </div>
     </main>
 

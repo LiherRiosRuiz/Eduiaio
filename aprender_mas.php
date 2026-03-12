@@ -73,7 +73,7 @@
                 <h3 class="text-lg font-bold mb-2">Salud Online</h3>
                 <p class="text-gray-600 text-sm mb-4">Pide cita en tu centro de salud, descarga recetas y consulta tus
                     informes médicos.</p>
-                <a href="tutorial_salud.php" class="text-red-600 font-semibold text-sm hover:underline">Empezar Tutorial</a>
+                <a href="tutoriales/salud.php" class="text-red-600 font-semibold text-sm hover:underline">Empezar Tutorial</a>
             </div>
 
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
@@ -84,7 +84,7 @@
                 <h3 class="text-lg font-bold mb-2">Banca Digital</h3>
                 <p class="text-gray-600 text-sm mb-4">Consulta tu saldo, revisa los movimientos y aprende a operar con
                     seguridad.</p>
-                <a href="tutorial_banca.php" class="text-indigo-600 font-semibold text-sm hover:underline">Empezar Tutorial</a>
+                <a href="tutoriales/banca.php" class="text-indigo-600 font-semibold text-sm hover:underline">Empezar Tutorial</a>
             </div>
 
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
@@ -95,7 +95,7 @@
                 <h3 class="text-lg font-bold mb-2">Administración</h3>
                 <p class="text-gray-600 text-sm mb-4">Certificado digital, Cl@ve PIN y gestiones con el ayuntamiento o
                     la seguridad social.</p>
-                <a href="tutorial_administracion.php" class="text-yellow-600 font-semibold text-sm hover:underline">Empezar Tutorial</a>
+                <a href="tutoriales/administracion.php" class="text-yellow-600 font-semibold text-sm hover:underline">Empezar Tutorial</a>
             </div>
 
         </div>

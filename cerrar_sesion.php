@@ -1,6 +1,5 @@
 <?php
-session_start();
+require_once __DIR__ . '/bootstrap.php';
 session_destroy();
-header('Location: landing_page.php');
+header('Location: ' . APP_URL . '/landing_page.php');
 exit;
-?>

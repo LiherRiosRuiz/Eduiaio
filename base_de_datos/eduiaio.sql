@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-02-2026 a las 09:11:03
+-- Tiempo de generación: 09-03-2026 a las 11:34:29
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -53,7 +53,39 @@ INSERT INTO `auditoria` (`id`, `tabla`, `accion`, `registro_id`, `detalles`, `fe
 (10, 'cursos', 'INSERTAR', 8, 'Nuevo curso creado: Dominando WhatsApp', '2026-02-02 09:01:37'),
 (11, 'cursos', 'ACTUALIZAR', 4, 'Precio cambiado de 35.00 a 35.00', '2026-02-02 09:01:37'),
 (12, 'cursos', 'INSERTAR', 9, 'Nuevo curso creado: Navegación Segura y Anti-Fraude', '2026-02-02 09:01:37'),
-(13, 'usuarios', 'INSERTAR', 4, 'Nuevo usuario registrado: Jimenon (Nombre: Jimena Salado, Rol: admin)', '2026-02-02 10:33:08');
+(13, 'usuarios', 'INSERTAR', 4, 'Nuevo usuario registrado: Jimenon (Nombre: Jimena Salado, Rol: admin)', '2026-02-02 10:33:08'),
+(14, 'cursos', 'ACTUALIZAR', 4, 'Precio cambiado de 35.00 a 35.00', '2026-02-23 10:31:45'),
+(15, 'cursos', 'ACTUALIZAR', 4, 'Precio cambiado de 35.00 a 35.00', '2026-02-23 10:31:54'),
+(16, 'usuarios', 'INSERTAR', 5, 'Nuevo usuario registrado: Alejandro Peman (Nombre: N/A, Rol: estudiante)', '2026-02-23 10:33:55'),
+(17, 'cursos', 'ACTUALIZAR', 4, 'Precio cambiado de 35.00 a 35.00', '2026-02-23 10:49:59'),
+(18, 'cursos', 'ACTUALIZAR', 9, 'Precio cambiado de 25.00 a 25.03', '2026-02-23 11:48:44'),
+(19, 'cursos', 'ACTUALIZAR', 9, 'Precio cambiado de 25.03 a 25.03', '2026-02-23 11:48:51'),
+(20, 'cursos', 'INSERTAR', 10, 'Nuevo curso creado: delightez', '2026-02-23 11:49:24'),
+(21, 'cursos', 'ELIMINAR', 10, 'Curso eliminado: delightez', '2026-02-23 11:49:51'),
+(22, 'categorias', 'INSERTAR', 7, 'Nueva categoría creada: Programaci&oacute;n', '2026-02-23 11:50:13'),
+(23, 'cursos', 'ACTUALIZAR', 8, 'Precio cambiado de 20.00 a 20.00', '2026-02-23 11:50:40'),
+(24, 'categorias', 'ACTUALIZAR', 7, 'Nombre de categoría cambiado de Programaci&oacute;n a Programación', '2026-02-23 11:54:23'),
+(25, 'categorias', 'INSERTAR', 8, 'Nueva categoría creada: Atenci&oacute;n', '2026-02-23 12:08:19'),
+(26, 'cursos', 'INSERTAR', 11, 'Nuevo curso creado: Prueba acentos', '2026-02-23 12:08:39'),
+(27, 'categorias', 'ACTUALIZAR', 8, 'Nombre de categoría cambiado de Atenci&oacute;n a Atención', '2026-02-23 12:13:04'),
+(28, 'cursos', 'ACTUALIZAR', 1, 'Precio cambiado de 200.00 a 200.00', '2026-02-23 12:13:04'),
+(29, 'cursos', 'ACTUALIZAR', 2, 'Precio cambiado de 20.00 a 20.00', '2026-02-23 12:13:04'),
+(30, 'cursos', 'ACTUALIZAR', 3, 'Precio cambiado de 30.00 a 30.00', '2026-02-23 12:13:04'),
+(31, 'cursos', 'ACTUALIZAR', 4, 'Precio cambiado de 35.00 a 35.00', '2026-02-23 12:13:04'),
+(32, 'cursos', 'ACTUALIZAR', 5, 'Precio cambiado de 15.00 a 15.00', '2026-02-23 12:13:04'),
+(33, 'cursos', 'ACTUALIZAR', 8, 'Precio cambiado de 20.00 a 20.00', '2026-02-23 12:13:04'),
+(34, 'cursos', 'ACTUALIZAR', 9, 'Precio cambiado de 25.03 a 25.03', '2026-02-23 12:13:04'),
+(35, 'cursos', 'ACTUALIZAR', 11, 'Precio cambiado de 100.00 a 100.00', '2026-02-23 12:13:04'),
+(36, 'categorias', 'INSERTAR', 9, 'Nueva categoría creada: Precaución activa', '2026-02-23 12:13:45'),
+(37, 'cursos', 'INSERTAR', 12, 'Nuevo curso creado: Prevención de Riesgos en Internet', '2026-02-23 12:14:07'),
+(38, 'cursos', 'ACTUALIZAR', 9, 'Precio cambiado de 25.03 a 25.03', '2026-02-23 12:14:31'),
+(39, 'cursos', 'INSERTAR', 13, 'Nuevo curso creado: Programación', '2026-03-02 11:39:15'),
+(40, 'usuarios', 'INSERTAR', 6, 'Nuevo usuario registrado: IOar (Nombre: bua, Rol: estudiante)', '2026-03-02 12:37:32'),
+(41, 'usuarios', 'ACTUALIZAR', 6, 'Teléfono cambiado. ', '2026-03-02 12:37:44'),
+(42, 'cursos', 'INSERTAR', 14, 'Nuevo curso creado: achine learninbvf', '2026-03-02 12:39:27'),
+(43, 'cursos', 'ELIMINAR', 14, 'Curso eliminado: achine learninbvf', '2026-03-02 12:39:37'),
+(44, 'usuarios', 'INSERTAR', 7, 'Nuevo usuario registrado: Prueba Telefono (Nombre: Telf, Rol: profesor)', '2026-03-02 12:48:54'),
+(45, 'usuarios', 'ACTUALIZAR', 6, 'Teléfono cambiado. ', '2026-03-02 12:49:26');
 
 -- --------------------------------------------------------
 
@@ -76,7 +108,10 @@ INSERT INTO `categorias` (`id`, `nombre`, `descripcion`) VALUES
 (2, 'Comunicación y Redes', 'WhatsApp, Videollamadas y Redes Sociales para conectar con la familia'),
 (3, 'Trámites y Gestiones', 'Banca online, Citas médicas y Administración electrónica'),
 (4, 'Ocio y Bienestar', 'Fotografía, Viajes, Memoria y Entretenimiento digital'),
-(5, 'Seguridad Digital', 'Uso seguro de internet y prevención de estafas');
+(5, 'Seguridad Digital', 'Uso seguro de internet y prevención de estafas'),
+(7, 'Programación', 'Profe'),
+(8, 'Atención', 'Prueba acentos'),
+(9, 'Precaución activa', 'Prueba');
 
 --
 -- Disparadores `categorias`
@@ -117,6 +152,7 @@ CREATE TABLE `cursos` (
   `descripcion` text DEFAULT NULL,
   `precio` decimal(10,2) DEFAULT 0.00,
   `categoria_id` int(11) DEFAULT NULL,
+  `id_nivel` int(11) DEFAULT NULL,
   `creado_por` int(11) DEFAULT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -125,14 +161,17 @@ CREATE TABLE `cursos` (
 -- Volcado de datos para la tabla `cursos`
 --
 
-INSERT INTO `cursos` (`id`, `titulo`, `descripcion`, `precio`, `categoria_id`, `creado_por`, `fecha_creacion`) VALUES
-(1, 'Uso Básico del Teléfono Móvil', 'Aprende a llamar, guardar contactos y usar la cámara sin miedo', 200.00, 1, 1, '2026-01-26 08:24:33'),
-(2, 'WhatsApp para Mantener el Contacto', 'Envía fotos, audios y haz videollamadas con tus nietos y amigos', 20.00, 2, 1, '2026-01-26 08:24:33'),
-(3, 'Pierde el Miedo al Ordenador', 'Curso de iniciación desde cero: Ratón, teclado y navegación web', 30.00, 1, 1, '2026-01-26 08:24:33'),
-(4, 'Banca Online Segura', 'Gestiona tus cuentas desde casa sin hacer colas. Consulta saldo y movimientos con total seguridad.', 35.00, 3, 1, '2026-01-26 08:24:33'),
-(5, 'Salud y Citas Médicas Online', 'Gestiona tus citas y recetas desde el móvil o el ordenador', 15.00, 3, 1, '2026-01-26 08:24:33'),
-(8, 'Dominando WhatsApp', 'Aprende a comunicarte con tus nietos, enviar fotos, audios y realizar videollamadas de forma sencilla.', 20.00, 2, 1, '2026-02-02 09:01:37'),
-(9, 'Navegación Segura y Anti-Fraude', 'Aprende a detectar estafas, SMS falsos y navega tranquilo por internet.', 25.00, 5, 1, '2026-02-02 09:01:37');
+INSERT INTO `cursos` (`id`, `titulo`, `descripcion`, `precio`, `categoria_id`, `id_nivel`, `creado_por`, `fecha_creacion`) VALUES
+(1, 'Uso Básico del Teléfono Móvil', 'Aprende a llamar, guardar contactos y usar la cámara sin miedo', 200.00, 1, 1, 1, '2026-01-26 08:24:33'),
+(2, 'WhatsApp para Mantener el Contacto', 'Envía fotos, audios y haz videollamadas con tus nietos y amigos', 20.00, 2, 2, 1, '2026-01-26 08:24:33'),
+(3, 'Pierde el Miedo al Ordenador', 'Curso de iniciación desde cero: Ratón, teclado y navegación web', 30.00, 1, 1, 1, '2026-01-26 08:24:33'),
+(4, 'Banca Online Segura', 'Gestiona tus cuentas desde casa sin hacer colas. Consulta saldo y movimientos con total seguridad.                                                            ', 35.00, 3, 3, 1, '2026-01-26 08:24:33'),
+(5, 'Salud y Citas Médicas Online', 'Gestiona tus citas y recetas desde el móvil o el ordenador', 15.00, 3, 2, 1, '2026-01-26 08:24:33'),
+(8, 'Dominando WhatsApp', '                        Aprende a comunicarte con tus nietos, enviar fotos, audios y realizar videollamadas de forma sencilla.                    ', 20.00, 7, 2, 1, '2026-02-02 09:01:37'),
+(9, 'Navegación Segura y Anti-Fraude', 'Aprende a detectar estafas, SMS falsos y navega tranquilo por internet.', 25.03, 5, 4, 1, '2026-02-02 09:01:37'),
+(11, 'Prueba acentos', 'Hola', 100.00, 8, 1, 1, '2026-02-23 12:08:39'),
+(12, 'Prevención de Riesgos en Internet', 'HOla', 100.00, 9, 3, 1, '2026-02-23 12:14:07'),
+(13, 'Programación', 'Programación', 100.00, 7, 5, 1, '2026-03-02 11:39:15');
 
 --
 -- Disparadores `cursos`
@@ -234,6 +273,29 @@ INSERT INTO `modulos` (`id`, `curso_id`, `titulo`, `descripcion`, `orden`, `fech
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `niveles`
+--
+
+CREATE TABLE `niveles` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `niveles`
+--
+
+INSERT INTO `niveles` (`id`, `nombre`) VALUES
+(1, 'A1 (Principiante)'),
+(2, 'A2 (Básico)'),
+(3, 'B1 (Intermedio)'),
+(4, 'B2 (Intermedio Alto)'),
+(5, 'C1 (Avanzado)'),
+(6, 'C2 (Maestro)');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `progreso`
 --
 
@@ -256,7 +318,13 @@ INSERT INTO `progreso` (`id`, `usuario_id`, `leccion_id`, `completado`, `fecha_c
 (3, 2, 7, 1, '2026-02-02 10:34:50', '2026-02-02 10:34:50'),
 (4, 2, 2, 1, '2026-02-02 12:33:30', '2026-02-02 12:33:30'),
 (5, 2, 3, 1, '2026-02-02 12:33:31', '2026-02-02 12:33:31'),
-(6, 2, 4, 1, '2026-02-02 12:33:32', '2026-02-02 12:33:32');
+(6, 2, 4, 1, '2026-02-02 12:33:32', '2026-02-02 12:33:32'),
+(7, 2, 8, 1, '2026-02-23 09:29:43', '2026-02-23 09:29:43'),
+(8, 2, 9, 1, '2026-02-23 09:29:45', '2026-02-23 09:29:45'),
+(9, 5, 1, 1, '2026-02-23 10:34:21', '2026-02-23 10:34:21'),
+(10, 5, 2, 1, '2026-02-23 10:34:23', '2026-02-23 10:34:23'),
+(11, 5, 3, 1, '2026-02-23 10:34:24', '2026-02-23 10:34:24'),
+(12, 5, 4, 1, '2026-02-23 10:34:25', '2026-02-23 10:34:25');
 
 -- --------------------------------------------------------
 
@@ -275,6 +343,7 @@ CREATE TABLE `usuarios` (
   `genero` enum('M','F','O') DEFAULT NULL,
   `clave` varchar(255) NOT NULL,
   `rol` enum('admin','estudiante','profesor') DEFAULT 'estudiante',
+  `id_nivel` int(11) DEFAULT NULL,
   `notas` text DEFAULT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -283,10 +352,13 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `usuario`, `nombre_completo`, `email`, `telefono`, `direccion`, `fecha_nacimiento`, `genero`, `clave`, `rol`, `notas`, `fecha_creacion`) VALUES
-(1, 'admin', NULL, 'admin@eduiaio.com', NULL, NULL, NULL, NULL, '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', NULL, '2026-01-26 08:24:33'),
-(2, 'Alejandro López', 'Alejandro Lopez Mogena', 'alejandrol@eduiaio.com', '123456789', 'Calle ASIR', '2006-03-23', 'M', '$2y$10$OgCdV6huPrPZYuazvY4PJub5/V8aT5pudFgUyCgolhrFR4lfzpDHq', 'estudiante', 'Prueba', '2026-01-26 10:40:25'),
-(4, 'Jimenon', 'Jimena Salado', 'jimenas@eduiaio.com', '123456789', 'Hola', '2006-05-10', 'O', '$2y$10$yIeaXMlf.pDojD7RpdE41u0.37ACPXMuTOCrsqQdoaFSISGOzj84K', 'admin', 'Hola', '2026-02-02 10:33:08');
+INSERT INTO `usuarios` (`id`, `usuario`, `nombre_completo`, `email`, `telefono`, `direccion`, `fecha_nacimiento`, `genero`, `clave`, `rol`, `id_nivel`, `notas`, `fecha_creacion`) VALUES
+(1, 'admin', NULL, 'admin@eduiaio.com', NULL, NULL, NULL, NULL, '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', 5, NULL, '2026-01-26 08:24:33'),
+(2, 'Alejandro López', 'Alejandro Lopez Mogena', 'alejandrol@eduiaio.com', '123456789', 'Calle ASIR', '2006-03-23', 'M', '$2y$10$OgCdV6huPrPZYuazvY4PJub5/V8aT5pudFgUyCgolhrFR4lfzpDHq', 'estudiante', 2, 'Prueba', '2026-01-26 10:40:25'),
+(4, 'Jimenon', 'Jimena Salado', 'jimenas@eduiaio.com', '123456789', 'Hola', '2006-05-10', 'O', '$2y$10$yIeaXMlf.pDojD7RpdE41u0.37ACPXMuTOCrsqQdoaFSISGOzj84K', 'admin', 4, 'Hola', '2026-02-02 10:33:08'),
+(5, 'Alejandro Peman', NULL, 'prueba1@gmail.com', NULL, NULL, NULL, NULL, '$2y$10$QkXkqwdt7P45KBnLWB1vOez5TFGnGYiD66IR3lID37z0vNiPw2Y6.', 'estudiante', 1, NULL, '2026-02-23 10:33:55'),
+(6, 'IOar', 'bua', 'ioar@gmail.com', '12345678910', '2', NULL, 'M', '$2y$10$eYrawsWsRYawvEjfFcORxueSudrpuerANK3V7kY5MyA.7tie2T7na', 'estudiante', 5, 'sds', '2026-03-02 12:37:32'),
+(7, 'Prueba Telefono', 'Telf', 'telf@gmail.com', '123456789', 'rfadwa', '2025-10-10', 'M', '$2y$10$ZOD5CIlee2G6mX/hT0.o7uMco7XQq/QVErprd7m40aflFxrTWpFt6', 'profesor', 2, 'adw', '2026-03-02 12:48:54');
 
 --
 -- Disparadores `usuarios`
@@ -364,6 +436,7 @@ ALTER TABLE `categorias`
 ALTER TABLE `cursos`
   ADD PRIMARY KEY (`id`),
   ADD KEY `categoria_id` (`categoria_id`),
+  ADD KEY `id_nivel` (`id_nivel`),
   ADD KEY `creado_por` (`creado_por`);
 
 --
@@ -389,6 +462,12 @@ ALTER TABLE `modulos`
   ADD KEY `curso_id` (`curso_id`);
 
 --
+-- Indices de la tabla `niveles`
+--
+ALTER TABLE `niveles`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `progreso`
 --
 ALTER TABLE `progreso`
@@ -402,7 +481,8 @@ ALTER TABLE `progreso`
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `usuario` (`usuario`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD UNIQUE KEY `email` (`email`),
+  ADD KEY `id_nivel` (`id_nivel`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -412,19 +492,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `auditoria`
 --
 ALTER TABLE `auditoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `cursos`
 --
 ALTER TABLE `cursos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `inscripciones`
@@ -445,16 +525,22 @@ ALTER TABLE `modulos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT de la tabla `niveles`
+--
+ALTER TABLE `niveles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT de la tabla `progreso`
 --
 ALTER TABLE `progreso`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restricciones para tablas volcadas
@@ -465,7 +551,8 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `cursos`
   ADD CONSTRAINT `cursos_ibfk_1` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`) ON DELETE SET NULL,
-  ADD CONSTRAINT `cursos_ibfk_2` FOREIGN KEY (`creado_por`) REFERENCES `usuarios` (`id`) ON DELETE SET NULL;
+  ADD CONSTRAINT `cursos_ibfk_2` FOREIGN KEY (`creado_por`) REFERENCES `usuarios` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `cursos_ibfk_3` FOREIGN KEY (`id_nivel`) REFERENCES `niveles` (`id`) ON DELETE SET NULL;
 
 --
 -- Filtros para la tabla `inscripciones`
@@ -492,6 +579,12 @@ ALTER TABLE `modulos`
 ALTER TABLE `progreso`
   ADD CONSTRAINT `progreso_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `progreso_ibfk_2` FOREIGN KEY (`leccion_id`) REFERENCES `lecciones` (`id`) ON DELETE CASCADE;
+
+--
+-- Filtros para la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_nivel`) REFERENCES `niveles` (`id`) ON DELETE SET NULL;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

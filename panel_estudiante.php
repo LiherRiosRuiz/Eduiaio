@@ -9,17 +9,13 @@
  * cuando el rol de la sesión es 'estudiante'.
  */
 
-// Iniciar sesión si no está activa (puede ser incluido desde panel.php)
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+// Puede ser incluido desde panel.php (que ya cargó bootstrap) o cargarse directamente
+if (!defined('ROOT')) {
+    require_once __DIR__ . '/bootstrap.php';
 }
 
-require_once 'configuracion/conexion.php';
-require_once 'includes/auth.php';
-require_once 'includes/funciones.php';
-
 // Verificar acceso
-requerir_sesion('iniciar_sesion.php');
+requerir_sesion();
 
 $id_usuario = $_SESSION['id_usuario'];
 
@@ -56,8 +52,6 @@ foreach ($cursos as $c) {
 // ── Variables para el fragmento <head> ───────────────────────────────
 $titulo_pagina = 'Mi Panel';
 $fuente        = 'Outfit';
-$css_href      = 'recursos/estilos/estilos.css';
-$ruta_raiz     = '';  // estamos en la raíz
 ?>
 <!DOCTYPE html>
 <html lang="es">

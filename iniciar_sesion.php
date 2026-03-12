@@ -7,12 +7,11 @@
  * y, si son correctas, inicia la sesión y redirige al panel.
  */
 
-session_start();
-require_once 'configuracion/conexion.php';
+require_once __DIR__ . '/bootstrap.php';
 
 // ── Si ya está logueado, redirigir directamente al panel ──────────────
 if (isset($_SESSION['id_usuario'])) {
-    header('Location: panel.php');
+    header('Location: ' . APP_URL . '/panel.php');
     exit;
 }
 
@@ -20,6 +19,7 @@ if (isset($_SESSION['id_usuario'])) {
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    csrf_verificar();
     $correo    = filter_input(INPUT_POST, 'correo', FILTER_SANITIZE_EMAIL);
     $contrasena = $_POST['contrasena'] ?? '';
 
@@ -33,12 +33,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Verificar contraseña con hash bcrypt
         if ($usuario && password_verify($contrasena, $usuario['clave'])) {
+            // Regenerar ID de sesión para prevenir session fixation
+            session_regenerate_id(true);
+
             // Inicio de sesión exitoso — guardar datos en sesión
             $_SESSION['id_usuario']      = $usuario['id'];
             $_SESSION['nombre_usuario']  = $usuario['usuario'];
             $_SESSION['rol']             = $usuario['rol'];
 
-            header('Location: panel.php');
+            header('Location: ' . APP_URL . '/panel.php');
             exit;
         } else {
             $error = 'Correo o contraseña incorrectos.';
@@ -50,7 +53,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // ── Variables para el fragmento <head> ───────────────────────────────
 $titulo_pagina = 'Iniciar Sesión';
-$css_href      = 'recursos/estilos/estilos.css';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -78,6 +80,7 @@ $css_href      = 'recursos/estilos/estilos.css';
 
             <!-- Formulario de login -->
             <form method="POST" action="">
+                <?= csrf_campo() ?>
 
                 <div class="grupo-formulario">
                     <label class="etiqueta-formulario" for="correo">Correo Electrónico</label>
@@ -99,11 +102,13 @@ $css_href      = 'recursos/estilos/estilos.css';
 
             </form>
 
-            <!-- Credenciales de demo (solo desarrollo) -->
+            <!-- Credenciales de demo (solo en entorno de desarrollo) -->
+            <?php if (APP_ENV === 'development'): ?>
             <div class="info-credenciales">
                 <p>Credenciales Demo:</p>
                 <code>admin@eduiaio.com / password</code>
             </div>
+            <?php endif; ?>
 
             <!-- Enlace a registro -->
             <div class="pie-login" style="text-align: center; margin-top: 1.5rem; border-top: 1px solid var(--borde-color); padding-top: 1rem;">

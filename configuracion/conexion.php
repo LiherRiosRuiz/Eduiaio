@@ -1,21 +1,30 @@
 <?php
-// Configuración de la Base de Datos
-$servidor = 'localhost';
-$nombre_bd = 'eduiaio';
-$usuario = 'root';
-$contrasena = ''; // XAMPP por defecto es vacío
+/**
+ * configuracion/conexion.php
+ *
+ * Conexión PDO a la base de datos.
+ * Requiere que app.php haya sido cargado primero (via bootstrap.php).
+ */
 
 try {
-    $conexion = new PDO("mysql:host=$servidor;dbname=$nombre_bd;charset=utf8mb4", $usuario, $contrasena);
-    // Forzar el uso de utf8mb4 en todas las consultas
-    $conexion->exec("SET NAMES utf8mb4");
+    $conexion = new PDO(
+        "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET,
+        DB_USER,
+        DB_PASS
+    );
 
-    // Configurar PDO para lanzar excepciones en caso de error
+    // Forzar UTF-8 en todas las consultas
+    $conexion->exec("SET NAMES " . DB_CHARSET);
+
+    // Lanzar excepciones en caso de error SQL
     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // Establecer modo de obtención predeterminado a array asociativo
+
+    // Devolver arrays asociativos por defecto
     $conexion->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 } catch (PDOException $e) {
-    die("Error de conexión: " . $e->getMessage());
+    if (APP_ENV === 'development') {
+        die("Error de conexión: " . $e->getMessage());
+    }
+    die("Error de conexión. Por favor contacta al administrador.");
 }
-?>

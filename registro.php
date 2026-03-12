@@ -6,12 +6,11 @@
  * Valida los datos, comprueba duplicados y crea el usuario en la BD.
  */
 
-session_start();
-require_once 'configuracion/conexion.php';
+require_once __DIR__ . '/bootstrap.php';
 
 // ── Si ya está logueado, redirigir directamente al panel ──────────────
 if (isset($_SESSION['id_usuario'])) {
-    header('Location: panel.php');
+    header('Location: ' . APP_URL . '/panel.php');
     exit;
 }
 
@@ -20,6 +19,7 @@ $error   = '';
 $mensaje = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    csrf_verificar();
     $nombre_usuario      = trim($_POST['nombre_usuario'] ?? '');
     $correo              = filter_input(INPUT_POST, 'correo', FILTER_SANITIZE_EMAIL);
     $contrasena          = $_POST['contrasena'] ?? '';
@@ -66,7 +66,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // ── Variables para el fragmento <head> ───────────────────────────────
 $titulo_pagina = 'Registro';
-$css_href      = 'recursos/estilos/estilos.css';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -106,6 +105,7 @@ $css_href      = 'recursos/estilos/estilos.css';
 
                 <!-- Formulario de registro -->
                 <form method="POST" action="">
+                    <?= csrf_campo() ?>
 
                     <div class="grupo-formulario">
                         <label class="etiqueta-formulario" for="nombre_usuario">Nombre de Usuario</label>

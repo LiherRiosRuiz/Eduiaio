@@ -24,7 +24,7 @@
             <span style="color: white;">
                 Hola, <strong><?= htmlspecialchars($_SESSION['nombre_usuario']) ?></strong>
             </span>
-            <a href="<?= $ruta_raiz ?? '../' ?>cerrar_sesion.php"
+            <a href="<?= APP_URL ?>/cerrar_sesion.php"
                class="btn btn-peligro texto-pequeno"
                style="border: 1px solid rgba(255,255,255,0.2);">
                 Cerrar Sesión
